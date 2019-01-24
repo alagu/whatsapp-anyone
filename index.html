@@ -38,10 +38,13 @@
   <a href="whatsapp://send?phone=91" class="btn btn-lg btn-primary btn-block" id="send-message" >Send Message</a>
   <script>
     $(document).ready(function() {
-        number = $("#phone").val()
-        href = "whatsapp://send?phone=#{number}"
-        $("#send-message").attr('href',href)
-        $("#send-message").html("Whatsapp #{number}")
+      
+        $("#send-message").keyup(function() {
+          var number = $("#phone").val()
+          var href = "whatsapp://send?phone=" + number
+          $("#send-message").attr('href',href)
+          $("#send-message").html("Whatsapp " + number)
+        });
 
     });
   </script>
