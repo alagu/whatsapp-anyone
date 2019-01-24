@@ -39,7 +39,7 @@
   <script>
     $(document).ready(function() {
       
-        $("#send-message").keyup(function() {
+        $("#phone").keyup(function() {
           var number = $("#phone").val()
           var href = "whatsapp://send?phone=" + number
           $("#send-message").attr('href',href)
