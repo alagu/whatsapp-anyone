@@ -80,6 +80,13 @@
       />
 
       <a
+        href="#"
+        class="btn btn-lg btn-primary btn-block"
+        id="paste"
+        onclick="paste()"
+        >Paste</a
+      >
+      <a
         href="whatsapp://send?phone=91"
         class="btn btn-lg btn-primary btn-block"
         id="send-message"
@@ -96,6 +103,11 @@
           var href = "whatsapp://send?phone=" + number;
           $("#send-message").attr("href", href);
           $("#send-message").html("WhatsApp " + number);
+        }
+        async function paste() {
+          const text = await navigator.clipboard.readText();
+          $("#phone").val(text);
+          handleNumber();
         }
       </script>
     </form>
