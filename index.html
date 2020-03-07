@@ -87,13 +87,16 @@
       >
       <script>
         $(document).ready(function() {
-          $("#phone").keyup(function() {
-            var number = $("#phone").val();
-            var href = "whatsapp://send?phone=" + number;
-            $("#send-message").attr("href", href);
-            $("#send-message").html("Whatsapp " + number);
-          });
+          $("#phone").keyup(handleNumber);
         });
+        function handleNumber() {
+          var number = $("#phone")
+            .val()
+            .replace(/ /g, "");
+          var href = "whatsapp://send?phone=" + number;
+          $("#send-message").attr("href", href);
+          $("#send-message").html("WhatsApp " + number);
+        }
       </script>
     </form>
   </body>
