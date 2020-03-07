@@ -112,8 +112,10 @@
         }
         async function paste() {
           const text = await navigator.clipboard.readText();
-          $("#phone").val(text);
-          handleNumber();
+          if (text.length < 20) {
+            $("#phone").val(text);
+            handleNumber();
+          }
         }
       </script>
     </form>
