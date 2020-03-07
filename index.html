@@ -1,17 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="generator" content="Jekyll v3.8.5">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="generator" content="Jekyll v3.8.5" />
     <title>Whatsapp Anyone</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
     <!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <link
+      href="https://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
 
     <style>
       .bd-placeholder-img {
@@ -26,28 +32,40 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="whatsapp.css" rel="stylesheet">
+    <link href="whatsapp.css" rel="stylesheet" />
   </head>
   <body class="text-center">
     <form class="form-signin">
-  <img class="mb-4" src="whatsapp.png" alt="" width="72" height="72">
-  <h1 class="h3 mb-3 font-weight-normal">Whatsapp Anyone</h1>
-  <label for="inputEmail" class="sr-only">Phone Number</label>
-  <input style="margin-bottom: 20px" type="text" id="phone" class="form-control" placeholder="Phone Number" value="91" required autofocus>
-      
-  <a href="whatsapp://send?phone=91" class="btn btn-lg btn-primary btn-block" id="send-message" >Send Message</a>
-  <script>
-    $(document).ready(function() {
-      
-        $("#phone").keyup(function() {
-          var number = $("#phone").val()
-          var href = "whatsapp://send?phone=" + number
-          $("#send-message").attr('href',href)
-          $("#send-message").html("Whatsapp " + number)
-        });
+      <img class="mb-4" src="whatsapp.png" alt="" width="72" height="72" />
+      <h1 class="h3 mb-3 font-weight-normal">Whatsapp Anyone</h1>
+      <label for="inputEmail" class="sr-only">Phone Number</label>
+      <input
+        style="margin-bottom: 20px"
+        type="text"
+        id="phone"
+        class="form-control"
+        placeholder="Phone Number"
+        value="91"
+        required
+        autofocus
+      />
 
-    });
-  </script>
-</form>
-</body>
+      <a
+        href="whatsapp://send?phone=91"
+        class="btn btn-lg btn-primary btn-block"
+        id="send-message"
+        >Send Message</a
+      >
+      <script>
+        $(document).ready(function() {
+          $("#phone").keyup(function() {
+            var number = $("#phone").val();
+            var href = "whatsapp://send?phone=" + number;
+            $("#send-message").attr("href", href);
+            $("#send-message").html("Whatsapp " + number);
+          });
+        });
+      </script>
+    </form>
+  </body>
 </html>
